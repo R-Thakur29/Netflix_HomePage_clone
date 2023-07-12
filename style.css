@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/header-image.png");
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0%;
+    position: relative;
+}
+
+nav{
+    margin: 20px 55px 0 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: white;
+    padding: 7px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.language{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.language i{
+    margin-right: 5px;
+}
+
+.language img {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.header-content{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 60px;
+    line-height: 50px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3{
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Email{
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.Email-box{
+    background: rgba(0, 0, 0, 0.548);
+    font-size: 12px;
+    padding: 2.2%;
+    width: 100%;
+    border: 0.5px solid white;
+    border-radius: 3px;
+    color: white;
+}
+
+.Email input {
+    flex: 1;
+    outline: 0;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.Email button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 3px;
+    width: 20%;
+}
+
+/** Features   **/
+
+.space{
+    width: 100%;
+    height: 6px;
+    background-color: gray;
+}
+
+.feature{
+    padding-left:12%;
+    padding-right: 12%;  
+    font-size: 22px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.feature h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/** FAQs  **/
+
+.faq{
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 19px;
+}
+
+.faq h2{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.question {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.question li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.question li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.8s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.question .content {
+    background: #303030;
+    text-align: left;
+    padding: 0px 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-heigth 0.6s, padding 0.6s ;
+}
+
+.question input[type="checkbox"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.question input[type="checkbox"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.faq .Email{
+    max-width: 550px;
+    margin: 20px auto 60px;
+}
+
+.faq .Email button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    width: 22%;
+}
+
+.faq small {
+    font-size: 22px;
+}
+
+/** Footer  **/
+.footer{
+    padding: 50px 15% 10px;
+    color: #777;
+}
+
+.footer h2{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.footer .col{
+    flex-basis: 33%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.footer .language {
+    font-size: 16px;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+.net-text {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav {
+        margin: 15px;
+    }
+    .logo{
+        width: 100px;
+    }
+    nav button{
+        padding: 5px 10px;
+    }
+
+    nav .language{
+        padding: 4px 8px;
+    }
+
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 160px;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+        line-height: 25px;
+    }
+    
+    .header-content h3 {
+       
+        margin-top: 10px;
+        margin-bottom: 20px; 
+    }
+
+    .Email {
+        font-size: 10px;
+        margin: 30px;
+        margin-top: 15px;
+        height: 40px;
+        border-radius: 3px;
+    }
+
+    .Email button {
+        padding: 5px 10px;
+    }
+
+    .text-col, .img-col {
+        flex-basis: 100%;
+    }
+
+    .feature h2 {
+        font-size: 30px;
+    }
+
+    .feature p {
+        font-size: 15px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .feature .row {
+        padding: 20px 0;
+    }
+
+    .faq {
+        margin: 5%;
+    }
+    
+    .faq h2{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .question .content {
+        font-size: 14px;    
+    }
+
+    .question li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label ::after {
+        font-size: 22px;
+    }
+
+    .faq .Email {
+        width: 350px;
+    }
+
+}
